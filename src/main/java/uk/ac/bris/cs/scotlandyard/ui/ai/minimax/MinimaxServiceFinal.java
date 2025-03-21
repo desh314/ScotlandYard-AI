@@ -13,6 +13,11 @@ import java.util.concurrent.Callable;
 /**
  * Minimax service class that is used to implement multithreading for Minimax.
  */
+
+// Sources for the psuedocode and explanations:
+// https://youtu.be/l-hh51ncgDI?feature=shared
+// https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
+// https://en.wikipedia.org/wiki/Minimax
 public class MinimaxServiceFinal implements Callable<Pair<Move, Double>> {
 
     ScoringStrategy scorer;

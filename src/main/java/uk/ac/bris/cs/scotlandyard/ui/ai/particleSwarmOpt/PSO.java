@@ -29,6 +29,8 @@ Evaluation of PSO Strategy:
 
  */
 
+// Inspired by: https://machinelearningmastery.com/a-gentle-introduction-to-particle-swarm-optimization/
+
 /**
  * Class that runs particle swarm optimization
  * The detectives are modelled as particles in a swarm that try to explore the graph using a loss function

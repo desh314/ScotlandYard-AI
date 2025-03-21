@@ -94,6 +94,7 @@ public class MCStrategy implements MoveSelectingStrategy {
 //            }
 //        }
 
+        // Iterate over the root, and extract the move from the best child.
         MCChild scoreNode = new MonteCarlo(initExplorationCost, numSims, initGameState, treeIters, lookAhead).chooseChild();
 
         if (!scoreNode.currGameState.getWinner().isEmpty())

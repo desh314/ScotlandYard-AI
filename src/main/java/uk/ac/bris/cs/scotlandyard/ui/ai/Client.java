@@ -24,15 +24,6 @@ import java.util.concurrent.TimeUnit;
 
 import static uk.ac.bris.cs.scotlandyard.ui.ai.minimax.archive.MinimaxStrategy.isMrXTurn;
 
-/*
-Problem is that the scoring function has too little variation so sometimes the playuers just undluate and go and back and forth
-No global search function only local search
-Because of the fact that there are only so many reveal actions it doesnt make many sense
-
-Need to capitalize on the behaviour that if one detective gets close then we need to get all the detectives to get close
-Add a scoring function that makes the detectives converge together
-*/
-
 /**
  * Client class for the Scotland Yard AI
  */
@@ -62,14 +53,15 @@ public class Client implements Ai {
             return board.getAvailableMoves().asList().get(0); // If there is only one move then take it.
         }
 
-        //return MCSimService.chooseRandomMove(simGameState.getAvailableMoves()).get();
-        //return new MoveSelector().chooseMove(new MonteCarloFactory().getMoveSelectingStrategy(), board);
-        //return new MoveSelector().chooseMove(new MinimaxFactory().getMoveSelectingStrategy(), board);
-//        return MoveSelector.chooseMove(board, new MonteCarloFactory(0.4).getMoveSelectingStrategy());
-        //return new MoveSelector().chooseMove(new ParticleSwarmStrategy(13, new FastScorer(new GreedyAStar()), 4000), board);
-//        return new MoveSelector().chooseMove(new MonteCarloFactory(0.4).getMoveSelectingStrategy(), board);
-        //return new MoveSelector().chooseMove(new MCSimMoveSelector(3, 100, 8), board);
-        return new MoveSelector().chooseMove(new ParticleSwarmFactory().getMoveSelectingStrategy(), board);
+        //MONTE CARLO TREE SEARCH
+        return new MoveSelector().chooseMove(new MonteCarloFactory().getMoveSelectingStrategy(), board);
+
+        //MINIMAX
+//        return new MoveSelector().chooseMove(new MinimaxFactory().getMoveSelectingStrategy(), board);
+
+        //PSO
+//        return new MoveSelector().chooseMove(new ParticleSwarmFactory().getMoveSelectingStrategy(), board);
+
 
 
     }

@@ -18,7 +18,10 @@ import java.util.concurrent.*;
 
 //implement parrelalization of the code?
 
-
+// Sources for the psuedocode and explanations:
+// https://youtu.be/l-hh51ncgDI?feature=shared
+// https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
+// https://en.wikipedia.org/wiki/Minimax
 public class MinimaxStrategy implements MoveSelectingStrategy {
 
     //minimax works but need to find a way to get more depth

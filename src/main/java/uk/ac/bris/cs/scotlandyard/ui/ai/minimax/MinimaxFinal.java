@@ -15,6 +15,11 @@ import java.util.concurrent.*;
 /**
  * Class implementing a {@link MoveSelectingStrategy} using minimax.
  */
+
+// Sources for the psuedocode and explanations:
+    // https://youtu.be/l-hh51ncgDI?feature=shared
+    // https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
+    // https://en.wikipedia.org/wiki/Minimax
 public class MinimaxFinal implements MoveSelectingStrategy{
     int depth;
     ScoringStrategy scoringStrategy;
@@ -149,9 +154,6 @@ public class MinimaxFinal implements MoveSelectingStrategy{
 
         ArrayList<MinimaxServiceFinal> tasks = new ArrayList<>();
 
-        System.out.println("--- BEFORE ADVANCE ---");
-        System.out.println();
-
         for (Move m : s.getAvailableMoves()) {
             SimulationGameState advanced = s.copy(s).advance(m);
             // We filter out moves that result in a position where Mr X can be caught; unless there are no other
@@ -163,8 +165,6 @@ public class MinimaxFinal implements MoveSelectingStrategy{
             List<Future<Pair<Move, Double>>> results = threads.invokeAll(tasks);
 
             List<Pair<Move, Double>> processed = convertDupMovesToMostEff(results);
-
-            System.out.println("Every move found for Mr X: " + processed);
 
             for (Pair<Move, Double> f : processed) {
                 if (f.right() >= max) {

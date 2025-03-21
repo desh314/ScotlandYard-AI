@@ -13,6 +13,11 @@ import java.util.concurrent.Callable;
 
 import static uk.ac.bris.cs.scotlandyard.ui.ai.minimax.archive.MinimaxStrategy.isMrXTurn;
 
+// Sources for the psuedocode and explanations:
+// https://youtu.be/l-hh51ncgDI?feature=shared
+// https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
+// https://en.wikipedia.org/wiki/Minimax
+
 public class MinimaxService implements Callable<Pair<Move, Double>> {
 
     private SimulationGameState simGameState;

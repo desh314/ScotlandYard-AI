@@ -14,6 +14,8 @@ import java.util.concurrent.Callable;
 
 import static uk.ac.bris.cs.scotlandyard.ui.ai.minimax.archive.MinimaxStrategy.isMrXTurn;
 
+// Inspired by: https://ai-boson.github.io/mcts
+
 /**
  * Main class implementing the Monte Carlo Search Tree. Expands, updates, and back propagates the result.
  */
