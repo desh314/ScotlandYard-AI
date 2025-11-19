@@ -3,7 +3,7 @@
 
 Various algorithms developed to play Scotland Yard. 
 
-
+![alt-text](https://github.com/desh314/ScotlandYard-AI/blob/8a3b43984950e5836d4671d7f9899e23b7630cba/MRXSIMS.png)
 
 
 ## Algorithms Implemented:
