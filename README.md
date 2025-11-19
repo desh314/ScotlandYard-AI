@@ -1,12 +1,12 @@
 # Scotland Yard AI
-------
+
+
 Various algorithms developed to play Scotland Yard. 
 
 
 
 
 ## Algorithms Implemented:
-------
 
   - ### Minimax
     - Filtering and multi-threading to improve the depth of the search tree for minimax
@@ -19,6 +19,6 @@ Various algorithms developed to play Scotland Yard.
     - Got comparable performance to minimax and MCTS with much less computation and time.
 
 ## Project Documentation:
-------
+
 [Results and key findings](https://drive.google.com/file/d/14HCROs98tYaQZbPGIvEDkNLh6KHDVkTk/view?usp=sharing)
 
